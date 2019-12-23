@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="header">
+        <h1>Сравнение телефонов</h1>
+    </div>
+</div>
+<table>
+    <tr height="70">
+        <td>Модель</td>
+        {% for i in items%}
+        <td><h6>{{i.name}}</h6></td>
+        {% endfor %}
+    </tr>
+    <tr height="70">
+        <td>Цена</td>
+        {% for i in items%}
+        <td>{{i.price}} руб.</td>
+        {% endfor %}
+    </tr>
+    <tr height="70">
+        <td>Процессор</td>
+        {% for i in items%}
+        <td>{{i.cpu}}</td>
+        {% endfor %}
+    </tr>
+    <tr height="70">
+        <td>Оперативная память</td>
+        {% for i in items%}
+        <td>{{i.ram}}</td>
+        {% endfor %}
+    </tr>
+    <tr height="70">
+        <td>Дисплей</td>
+        {% for i in items%}
+        <td>{{i.display}}</td>
+        {% endfor %}
+    </tr>
+    <tr height="111">
+        <td>Дополнительно</td>
+        {% for i in items%}
+        <td>{{i.other}}</td>
+        {% endfor %}
+    </tr>
+
+</table>
+{% endblock %}
